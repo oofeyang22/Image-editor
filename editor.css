@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e3f2fd;
+    min-height: 100vh;
+}
+.wrapper{
+    width: 800px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    max-height: 1000px;
+}
+.wrapper.disable :where(.filter-panel, .save-img){
+    opacity: 0.6;
+    pointer-events: none;
+}
+.container{
+    display: flex;
+    min-height: 400px;
+    margin: 0.5rem;
+}
+
+.filter-panel{
+    border: 1px solid #ccc;
+    padding: 0.2rem;
+    max-width: 250px;
+    max-height: 450px;
+}
+.filter-panel .options {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.filter .options{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 0.5rem;
+}
+.filter button{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #1f1d1d;
+    background: white;
+    color: #6c757d;
+    cursor: pointer;
+
+}
+.filter .active{
+    background: purple;
+    color: white;
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+}
+.slider-info{
+    display: flex;
+    justify-content: space-between;
+}
+input{
+    width: 100%;
+    accent-color: purple;
+    height: 5px;
+}
+.rotate button{
+    width: 80px;
+    margin: 0.3rem;
+    height: 30px;
+    cursor: pointer;
+}
+.placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+img{
+    margin-left: 20px;
+    width: 100%;
+    height:100%;
+    object-fit: contain;
+    max-width: 490px;
+    max-height: 335px;
+}
+
+.reset-btn{
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    background: gray;
+    color: white;
+}
+.controls{
+    margin: 0.5rem;
+}
+.choose-img{
+    background: #1f1d1d;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.save-img{
+    background: purple;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 760px){
+    .wrapper{
+        padding: 1.5rem;
+    }
+
+    .wrapper .container{
+        flex-wrap: wrap-reverse;
+    }
+    .container .filter-panel{
+        width: 100%;
+    }
+    .container .placeholder{
+        width: 100%;
+        margin: 0 0 8px;
+    }
+    .controls .reset-btn{
+        margin-left: 5px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .controls{
+        
+        flex-direction: column;
+    }
+    .controls button{
+        width:100%;
+        margin-bottom: 6px;
+
+    }
+    .controls .row{
+        width: 100%;
+    }
+    .controls .row .save-img{
+        margin-left: 5px;
+    }
+    .controls .row .choose-img{
+        margin-left: 5px;
+    }
+}
