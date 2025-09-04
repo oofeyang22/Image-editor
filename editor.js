@@ -85,7 +85,7 @@ const createFilter= () => {
         saturation= filterSlider.value;
     }else if(selectedFilter.id="inversion"){
         inversion= filterSlider.value;
-    }else if(selectedFilter.id="greyscale"){
+    }else if(selectedFilter.id="grayscale"){
         grayscale= filterSlider.value;
     }else if(selectedFilter.id="contrast"){
         contrast= filterSlider.value;
@@ -94,6 +94,7 @@ const createFilter= () => {
     }else{
         sepia= filterSlider.value;
     }
+    addFilter()
 
 }
 
